@@ -49,6 +49,8 @@ removelowercase = [x | x <- "bBaN", x `elem` ['A'..'Z']]
 xxs = [[1,2],[2,3],[3,4]]
 stackedarr = [[x| x <- xs, x `mod` 2 == 0]| xs <- xxs]
 
+fstfunc = fst (1,2)
+sndfunc = snd (2,3)
 zipfunc = zip [1,2,3] [4,5,6]
 
 rightangtri = [[a,b,c]| a <- [1..20], b <- [1..20], c <- [1..20], a*a + b*b == c*c, a < b, b < c]
