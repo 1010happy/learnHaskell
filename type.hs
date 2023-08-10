@@ -1,9 +1,18 @@
 -- types and typeclasses
 
-
+-- removelowercase :: [Char] -> [Char]
 removelowercase x = [c|c<-x, c `elem` ['A'..'Z']]
 -- :t head gives [a] -> a
 -- :t fst gives (a,b) -> a
+-- remember strings have to be in "adfsa"
+
+--addthree :: Int -> Int -> Int -> Int
+addthree x y z = x+y+z
+-- addthreewithoutdec x y z = x+y+z
+
+factorial :: Integer -> Integer
+factorial x = product [1..x]
+
 comparefunc a b =  a `compare` b
 
 showString a = show a
@@ -33,6 +42,5 @@ numtest = 20 :: Float
 
 --fromIntegral :: (Num b, Integral a) => a -> b
 -- all restricted into type of a, then return b
--- takes Int/Integer turns into Integral (more general)
 
 -- fromIntegral (length [1,2,3,4]) + 3.2
