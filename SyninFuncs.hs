@@ -43,6 +43,7 @@ headtime (x:_) = x
 
 
 -- _ can be used in front or behind (if front, generally 1 var, if back, anyth)
+-- might be a case of front is default 1 var in general
 -- : to join 2 arays, can (x:y) to show arr of 2 eles
 tell :: [a] -> String -- original ver has a (Show a) => but doesn't explain why
 -- a has to be part of show (can be turned into string?)
@@ -65,5 +66,11 @@ summer [] = 0
 summer (x:[]) = x
 summer (x:xs) = x + summer xs
 
+-- preservation of multipl vars with @
+
+firstLetter :: String -> String
+firstLetter "" = "empteee"
+firstLetter all@(x:xs) = "first letter of "  ++ all ++ "is" ++ [x] 
+--[] needed so Char become [Char] ie. string for addVect
 
 
